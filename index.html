@@ -139,7 +139,7 @@
         <!-- Dataset: Add gradio app for people to play -->
     <section class="section">
       <div class="container is-max-desktop">
-        <h2 class="title is-4 has-text-centered">Guess the Answer!</h2>
+        <h2 class="title is-4 has-text-centered">🧩  Guess the Answer!</h2>
         <p>
             Try out our <b>visual puzzles annotator</b> to explore the dataset and test your own reasoning skills! (Click the button below) Submit the answer and move to the next question. You can download the json file of your answers.
         </p><br>
@@ -191,6 +191,24 @@
           <div class="column has-text-justified">
             <p>
                 <b>Models show a wide range of performance</b> <br><br> While closed source reasoning models such as o3, o4-mini, and gemini-2.5-pro perform relatively well, especially compared to human non-expert/non-native English speaking solvers, open-source reasoning models as non-reasoning models struggle to solve the tasks. Compared to expert solvers, however, there remains a significant model accuracy gap
+            </p>
+          </div>
+        </div>
+
+        <!-- Overall Results -->
+      <h3 class="title is-5">Per-skill model performance</h3>
+        <div class="columns is-vcentered">
+          <div class="content has-text-justified">
+            <div class="column">
+            <img src="static/images/per_skill.png" alt="per_skill" style="max-width: 100%;">
+          </div>
+            <p>
+              Skill specific results are given in the table above. (Information of the skills can be found in the paper.) In general, models are competent in solving SS/SPR and QMR, while they lack ability in AN/VMCR.
+              <ul>
+                <li><b> Gap between SS vs PW: </b> This suggests that VLMs are better at learning and applying these direct and rule-based symbolic transformations. </li>
+                <li><b> Gap between SPR vs LWM: </b>This gap implies a disconnection between understanding <i>spacial configuration</i> and <i>symbolic logic and complex linguistics</i>.</li>
+                <li><b> Text recognition: </b> Results imply that models can read text even when the orientation is unusual, but they are not always effectively using cues from the font style or size to derive the solution.</li>
+              </ul>
             </p>
           </div>
         </div>
