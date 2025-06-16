@@ -5,28 +5,28 @@
     <meta charset="utf-8">
     <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
-    <meta name="description" content="Generate, but Verify: Reducing Hallucination in Vision-Language Models with Retrospective Resampling">
-    <meta property="og:title" content="REVERSE" />
-    <meta property="og:description" content="Large Multimodal Models (LMMs) have made significant strides in visual question-answering for single images. Recent advancements like long-context LMMs have allowed them to ingest larger, or even multiple, images. However, the ability to process a large number of visual tokens does not guarantee effective retrieval and reasoning for multi-image question answering (MIQA), especially in real-world applications like photo album searches or satellite imagery analysis. In this work, we first assess the limitations of current benchmarks for long-context LMMs. We address these limitations by introducing a new vision-centric, long-context benchmark, Visual Haystacks (VHs). We comprehensively evaluate both open-source and proprietary models on VHs, and demonstrate that these models struggle when reasoning across potentially unrelated images, perform poorly on cross-image reasoning, as well as exhibit biases based on the placement of key information within the context window. Towards a solution, we introduce MIRAGE (Multi-Image Retrieval Augmented Generation), an open-source, lightweight visual-RAG framework that processes up to 10k images on a single 40G A100 GPU -- far surpassing the 1k-image limit of contemporary models. MIRAGE demonstrates up to 13% performance improvement over existing open-source LMMs on VHs, sets a new state-of-the-art on the RetVQA multi-image QA benchmark, and achieves competitive performance on single-image QA with state-of-the-art LMMs." />
-    <meta property="og:url" content="http://reverse-vlm.github.io" />
+    <meta name="description" content="Official repository for the 'Visual Puzzles' project: A benchmark and evaluation suite for probing abstract reasoning, symbolic manipulation, and lateral thinking in Vision-Language Models (VLMs) via challenging rebus puzzles.">
+    <meta property="og:title" content="Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint" />
+    <meta property="og:description" content="A benchmark and evaluation suite for probing abstract reasoning, symbolic manipulation, and lateral thinking in Vision-Language Models (VLMs) via challenging rebus puzzles." />
+    <meta property="og:url" content="https://visual-puzzles.github.io" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
-    <meta property="og:image" content="/static/images/REVERSE_logo.png" />
+    <meta property="og:image" content="/static/images/visual_puzzles_logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
 
-    <meta name="twitter:title" content="Generate, but Verify: Reducing Hallucination in Vision-Language Models with Retrospective Resampling">
-    <meta name="twitter:description" content="Large Multimodal Models (LMMs) have made significant strides in visual question-answering for single images. Recent advancements like long-context LMMs have allowed them to ingest larger, or even multiple, images. However, the ability to process a large number of visual tokens does not guarantee effective retrieval and reasoning for multi-image question answering (MIQA), especially in real-world applications like photo album searches or satellite imagery analysis. In this work, we first assess the limitations of current benchmarks for long-context LMMs. We address these limitations by introducing a new vision-centric, long-context benchmark, Visual Haystacks (VHs). We comprehensively evaluate both open-source and proprietary models on VHs, and demonstrate that these models struggle when reasoning across potentially unrelated images, perform poorly on cross-image reasoning, as well as exhibit biases based on the placement of key information within the context window. Towards a solution, we introduce MIRAGE (Multi-Image Retrieval Augmented Generation), an open-source, lightweight visual-RAG framework that processes up to 10k images on a single 40G A100 GPU -- far surpassing the 1k-image limit of contemporary models. MIRAGE demonstrates up to 13% performance improvement over existing open-source LMMs on VHs, sets a new state-of-the-art on the RetVQA multi-image QA benchmark, and achieves competitive performance on single-image QA with state-of-the-art LMMs." />
+    <meta name="twitter:title" content="Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint">
+    <meta name="twitter:description" content="A benchmark and evaluation suite for probing abstract reasoning, symbolic manipulation, and lateral thinking in Vision-Language Models (VLMs) via challenging rebus puzzles." />
     <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
-    <meta name="twitter:image" content="static/images/REVERSE_logo.png">
-    <meta name="twitter:card" content="REVERSE Project Logo: A cartoon character photo sitting on top of a haystack of images.">
+    <meta name="twitter:image" content="static/images/visual_puzzles_logo.png">
+    <meta name="twitter:card" content="Visual Puzzles Project Logo: A cartoon puzzle character photo.">
     <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords"
-        content="Large Multimodal Models, Long-context Reasoning, VQA, Image Retrieval">
+        content="Vision and language, Reasoning, VQA">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Generate, but Verify: Reducing Hallucination in Vision-Language Models with Retrospective Resampling</title>
+    <title>Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint</title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon_io/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon_io">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon_io/favicon-32x32.png">
@@ -56,9 +56,9 @@
         <div class="hero-body">
             <div class="container is-max-desktop">
                 <div class="columns is-centered is-vcentered">
-                    <div class="column "><img src="static/images/vhs_logo.png" height="187" width="187"></div>
+                    <div class="column "><img src="static/images/visual_puzzles_logo.png" height="187" width="187"></div>
                     <div class="column has-text-centered is-four-fifths is-vcentered">
-                        <h1 class="title is-2 publication-title">Generate, but Verify: Reducing Visual Hallucination in Vision-Language Models with Retrospective Resampling</h1>
+                        <h1 class="title is-2 publication-title">Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint</h1>
                     </div>
                 </div>
                 <div class="container is-max-desktop">
@@ -66,25 +66,25 @@
                         <div class="column has-text-centered is-four-fifths">
                             <div class="is-size-5 publication-authors">
                                 <!-- Paper authors -->
-                                <span class="author-block"><a href="https://tsunghan-wu.github.io/" target="_blank">Tsung-Han Wu<sup>1</sup></a>, </span>
-                                <span class="author-block"><a href="https://linkedin.com/in/heekyung-lee-624753289" target="_blank">Heekyung Lee<sup>1,2</sup></a>, </span>
-                                <span class="author-block"><a href="https://jiaxin.ge" target="_blank">Jiaxin Ge<sup>1</sup></a></span>
+                                <span class="author-block"><a href="https://kyunnilee.github.io/" target="_blank">Heekyung Lee<sup>1,2</sup></a>, </span>
+                                <span class="author-block"><a href="https://jiaxin.ge" target="_blank">Jiaxin Ge<sup>2</sup></a>, </span>
+                                <span class="author-block"><a href="https://tsunghan-wu.github.io/" target="_blank">Tsung-Han Wu<sup>2</sup></a></span>
                                 <br>
-                                <span class="author-block"><a href="https://people.eecs.berkeley.edu/~jegonzal/" target="_blank">Joseph E. Gonzalez<sup>1</sup></a>, </span>
-                                <span class="author-block"><a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1</sup></a>, </span>
-                                <span class="author-block"><a href="https://dchan.cc/" target="_blank">David M. Chan<sup>1</sup></a></span>
+                                <span class="author-block"><a href="https://joshuaminwookang.github.io/" target="_blank">Minwoo Kang<sup>2</sup></a>, </span>
+                                <span class="author-block"><a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>2</sup></a>, </span>
+                                <span class="author-block"><a href="https://dchan.cc/" target="_blank">David M. Chan<sup>2</sup></a></span>
                             </div>
 
                             <div class="is-size-5 publication-authors">
-                                <span class="author-block"><sup>1</sup>UC Berkeley</span>
-                                <span class="author-block"><sup>2</sup>POSTECH</span>
+                                <span class="author-block"><sup>1</sup>POSTECH</span>
+                                <span class="author-block"><sup>2</sup>UC Berkeley</span> 
                             </div>
 
                             <div class="column has-text-centered">
                                 <div class="publication-links">
 
                                     <span class="link-block">
-                                        <a href="https://arxiv.org/abs/2407.13766" target="_blank"
+                                        <a href="https://arxiv.org/abs/2505.23759" target="_blank"
                                             class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="ai ai-arxiv"></i>
@@ -92,32 +92,13 @@
                                             <span>arXiv</span>
                                         </a>
                                     </span>
-
                                     <span class="link-block">
-                                        <a href="https://reverse-vlm.github.io" target="_blank"
-                                            class="external-link button is-normal is-rounded is-dark">
-                                            <span class="icon" style="vertical-align: middle; font-size: 20px;">✨</span>
-                                            <span>Demo</span>
-                                        </a>
-                                    </span>
-
-                                    <span class="link-block">
-                                        <a href="https://github.com/visual-haystacks/vhs_benchmark" target="_blank"
+                                        <a href="https://github.com/Kyunnilee/visual_puzzles" target="_blank"
                                             class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="fa-brands fa-github"></i>
                                             </span>
-                                            <span>Dataset</span>
-                                        </a>
-                                    </span>
-
-                                    <span class="link-block">
-                                        <a href="https://github.com/visual-haystacks/mirage" target="_blank"
-                                            class="external-link button is-normal is-rounded is-dark">
-                                            <span class="icon">
-                                                <i class="fa-brands fa-github"></i>
-                                            </span>
-                                            <span>Code/Model</span>
+                                            <span>Code/Dataset</span>
                                         </a>
                                     </span>
                                 </div>
@@ -129,149 +110,129 @@
         </div>
     </section>
 
-
     <!-- Paper abstract -->
     <section class="section hero ">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full">
-
-                    <!-- YouTube Video Link -->
-<!--                     <h2 class="title is-4">Video Introduction</h2>
-                    <div class="content has-text-justified">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/PZ7H9vNZZag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div> -->
-                    <h2 class="title is-4">Visual Hallucination is Still a Problem</h2>
+                    <h2 class="title is-4">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Vision-Language Models (VLMs) have made huge strides on benchmarks like image captioning and VQA. But they still hallucinate — generating plausible-sounding text that's clearly not grounded in the image.
-                            To mitigate this, we introduce <strong>REVERSE</strong> (<strong>RE</strong>trospective <strong>VER</strong>ification and <strong>SE</strong>lf-correction), a unified framework that trains a VLM to both <strong>detect</strong> and <strong>fix</strong> its own hallucinations on-the-fly.
+                            Rebus puzzles, visual riddles that encode language through imagery, spatial arrangement, and symbolic substitution, pose a unique challenge to current vision-language models (VLMs). Unlike traditional image captioning or question answering tasks, rebus solving requires multi-modal abstraction, symbolic reasoning, and a grasp of cultural, phonetic and linguistic puns. In this paper, we investigate the capacity of contemporary VLMs to interpret and solve rebus puzzles by <b>constructing a hand-generated and annotated benchmark of diverse English-language rebus puzzles</b>, ranging from simple pictographic substitutions to spatially-dependent cues ("head" over "heels"). We analyze how different VLMs perform, and our findings reveal that while VLMs exhibit some surprising capabilities in decoding simple visual clues, they <b>struggle significantly with tasks requiring abstract reasoning, lateral thinking, and understanding visual metaphors.</b>
                         </p>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- End paper abstract -->
 
-
-
-    <!-- SESAME -->
-    <section class="section ">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full">
-                    <h2 class="title is-4">Why REVERSE?</h2>
-                </div>
-            </div>
-            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
-                <div class="content has-text-justified">
-                    <p>Previous approaches fall into two camps:
-                    <ul>
-                        <li>
-                            <b>Generation adjustment</b>: Uses custom losses or decoding tweaks to reduce hallucination. But these can't fix errors after generation.
-                        </li>
-                        <li>
-                            <b>Post-hoc verification</b>: Adds an external verifier (e.g., GPT-4) after generation. Accurate, but slow, complex, and often leads to generic refusals.
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>REVERSE</strong> takes a different route: ✅ A single VLM that detects, backtracks, and corrects hallucinations during decoding.
-                    </p>
-                </div>
-                <!-- <div class="item is-vcentered">
-                    <img src="static/images/figures/fig1.png" alt="VHs dataset overview" />
-                </div> -->
-            <!-- </div> -->
+    <!-- Dataset -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-4 has-text-centered">Dataset & Evaluation Metrics</h2>
+        <h3 class="title is-5">Our Dataset</h3>
+        <img src="static/images/rebus_dataset.png" alt="Comparison Table Placeholder" style="max-width: 100%;">
+        <div class="content has-text-justified">
+          <p>
+            We construct a human-crafted <b>probe dataset of 432 rebus puzzles</b>, challenging VLMs to reason effecitvely about visual-linguistic information. Each puzzle is annotated with its <b>ground-truth solution</b> and categorized into eleven <b>cognitive skill types</b>. This fine-grained labeling allows us to probe VLMs’ strengths and weaknesses across varied symbolic and visual reasoning tasks.
+          </p>
+          <h3 class="title is-5">Evaluation Metrics</h3>
+          <ul>
+            <li><strong>Naive Matching:</strong> Compares the predicted answer to the ground truth by exact string match after lowercasing and trimming. Supports multiple acceptable answers and is straightforward but rigid.</li>
+            <li><strong>LLM-Based Semantic Evaluation:</strong> Uses GPT-4o to judge correctness by understanding the answer's meaning, allowing for minor spelling differences and paraphrases, overcoming naive matching limits.</li>
+          </ul>
         </div>
+      </div>
     </section>
 
-    <section class="section hero">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full">
-                    <h2 class="title is-4">How It Works: Three Key Ingredients</h2>
-                    <div class="content has-text-justified">
-                        <ul>
-                            <li>
-                                <b>Explicit Confidence Estimation</b> 
-                                <br>
-                                VLMs often rely on token probabilities as a proxy for confidence — but those are unreliable and poorly calibrated. So we train the model to explicitly tag phrase-level confidence using new tokens:
-                                <ul>
-                                    <li>
-                                        <b>&lt;SPAN&gt;</b>: Start of a key phrase
-                                    </li>
-                                    <li>
-                                        <b>&lt;/CN&gt;</b>: End of confident (grounded) phrase
-                                    </li>
-                                    <li>
-                                        <b>&lt;/UN&gt;</b>: End of unconfident (potentially hallucinated) phrase
-                                    </li>
-                                </ul>
-                            </li>
-                            <br>
-                            <p>
-                                This lets the model not only flag uncertainty but also decide where to backtrack. We end up building a 1.3M-sample instruction-tuning dataset, augmenting LLaVA-v1.5, to teach the model this skill. Ensuring the quality of this dataset includes designing how to segment text into phrases, injecting realistic hallucinations, and even handling multilingual cases — not trivial (details are in our paper)!
-                            </p>
-                        </ul>
+    <!-- Dataset: Add gradio app for people to play -->
 
 
-                    </div>
-                    <div class="content has-text-justified">
-                        <ul>
-                            <li>
-                                <b>Hallucination-Aware Training</b>
-                                <br>
-                                Our training loss has three objectives:
-                                <ul>
-                                    <li>
-                                        <b>Standard next token prediction</b>: Standard VLM objective for the correct captioning / VQA data
-                                    </li>
-                                    <li>
-                                        <b>Confidence tagging</b>: (learn when to emit &lt;/UN&gt; vs &lt;/CN&gt;)
-                                    </li>
-                                    <li>
-                                        <b>Avoiding hallucination modeling</b>: model sees hallucinated inputs but is not trained to generate them
-                                </ul>
-                            </li>
-                            <br>
-                            <p>
-                                So the loss is applied like the following animation (please see our paper for more details):
-                            </p>
-                        </ul>
-                    </div>
-                    <!-- <div class="item is-vcentered">
-                        <img src="static/images/figures/fig2.png" alt="Effectiveness of LMMs with increasing number of images" width="90%">
-                    </div> -->
+    <!-- Combined Results: Analysis over Diverse Methods -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-4 has-text-centered">Results: Analysis over Diverse Methods</h2>
 
-                    <div class="content has-text-justified">
-                        <ul>
-                            <li>
-                                <b>Retrospective Resampling</b>
-                                <br>
-                                When the model predicts an unconfident phrase (marked with <code>&lt;/UN&gt;</code>), REVERSE activates a verification loop to resample and correct the hallucination:
-                                <li>
-                                    <strong>Backtrack:</strong> Roll back to the latest <code>&lt;/CN&gt;</code> tag, or further if needed, once the model’s unconfidence exceeds a threshold.
-                                </li>
-                                <li>
-                                    <strong>Correction:</strong> The model uses two techniques in tandem:
-                                    <ul>
-                                        <li>
-                                            strong>Rejection Sampling:</strong> Temperature is increased to encourage diverse alternatives; unconfident outputs are rejected.</li>
-                                        </li>
-                                        <li><strong>Query Rewriting:</strong> The user query is augmented with hints pointing out the potential hallucination to discourage repetition.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Regeneration:</strong> Generation resumes from the backtracked point, continuing until a confident phrase is produced or retry limits are hit.</li>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <!-- Overall Results -->
+        <h3 class="title is-5">Overall Results</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/overall_acc.png" alt="Overall Results" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b>Models show a wide range of performance</b> <br><br> While closed source reasoning models such as o3, o4-mini, and gemini-2.5-pro perform relatively well, especially compared to human non-expert/non-native English speaking solvers, open-source reasoning models as non-reasoning models struggle to solve the tasks. Compared to expert solvers, however, there remains a significant model accuracy gap
+            </p>
+          </div>
         </div>
+
+        <!-- ICL -->
+        <h3 class="title is-5">In-Context Learning (ICL)</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/icl_result.png" alt="ICL Result" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b>Does models truly understand the concept of a “rebus” puzzle from the prompt alone?</b> <br> <br>To reduce prompt-specific bias, we frame the task as in-context learning using a single example with an image, answer, and reasoning. The results show that performance remains largely unchanged, indicating limitations come from the VLM itself rather than the prompt. While stronger models see little benefit, smaller models like Qwen2.5-VL gain slightly from a worked reasoning example.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skill Guided Prompting -->
+        <h3 class="title is-5">Skill Guided Prompting</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/skill_guided.png" alt="Skill Guided Result" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b>Does models lack the capability to understand and apply which cognitive thinking skills are required for each puzzle?</b><br> <br>
+                Incorporating these skill-related prompts generally leads to minor improvements in model performance, suggesting the existence of an <i>awareness vs. execution gap</i>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caption Only -->
+        <h3 class="title is-5">Caption Only Experiments</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/caption_only.png" alt="Caption Only Result" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b>Vision? Or Language?</b> <br> <br>
+                Caption-only experiments reveal that strong reasoning models perform notably worse without direct visual input, highlighting the importance of visual perception quality. We hypothesize this drop occurs because reasoning models lack iterative visual examination during decoding, suggesting future work should explore how such processes impact overall VLM performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image Retrieval (moved here as last block) -->
+        <h3 class="title is-5">Image Retrieval</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/image_retrieval.png" alt="Retrieval Metrics Table Placeholder" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b>How do visual contrastive models perform in retrieving the correct answers?</b><br><br> To probe the underlying visual encoders, we evaluate multiple contrastive VLMs for their ability to retrieve correct answers based solely on image-text similarity. MobileCLIP and SigLIP variants show competitive results despite differing architecture sizes and patch resolutions, suggesting that finer-grained tokenization and explicit visual objectives benefit symbolic puzzle matching.</p>
+          </div>
+        </div>
+
+        <!-- Iterative Refinement -->
+        <h3 class="title is-5">Iterative Refinement</h3>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="static/images/iterative.png" alt="Iterative Refinement Result" style="max-width: 100%;">
+          </div>
+          <div class="column has-text-justified">
+            <p>
+                <b> Can models refine the solution given the opportunity to try again? </b> <br> <br>
+                Allowing models to iteratively refine answers gives significant potential for iterative refinement or self-correction. However, they still reach a performance ceiling after a number of attempts.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -280,13 +241,12 @@
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
-            <pre><code>@article{wu2024visual,
-  title={Generate, but Verify: Reducing Hallucination in Vision-Language Models with Retrospective Resampling},
-  author={Wu, Tsung-Han and Lee, Heekyung and Ge, Jiaxin and Gonzalez, Joseph E and Darrell, Trevor and Chan, David M},
-  journal={arXiv},
-  year={2025},
-  url={TODO}
-}</code></pre>
+            <pre><code>@inproceedings{lee2025puzzled,
+                title={Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint},
+                author={Heekyung Lee and Jiaxin Ge and Tsung-Han Wu and Minwoo Kang and Trevor Darrell and David M. Chan},
+                year={2025},
+                journal={arXiv preprint arXiv:2505.23759}}
+            </code></pre>
         </div>
     </section>
     <!--End BibTex citation -->
